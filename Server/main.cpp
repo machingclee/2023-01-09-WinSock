@@ -73,8 +73,8 @@ void main() {
                     // send message to other clients, excluding the listening socket
                     for (int i = 0; i < master.fd_count; i++) {
                         SOCKET outSock = master.fd_array[i];
-                        bool isNullSenetence = buffer[0] == 13 && buffer[1] == 10;
-                        if (outSock != listening && outSock != sock && !isNullSenetence) {
+                        bool isNullSentence = buffer[0] == 13 && buffer[1] == 10;
+                        if (outSock != listening && outSock != sock && !isNullSentence) {
                             ostringstream ss;
                             ss << "SOCKET #" << sock << ": " << buffer << "\r\n";
                             string strOut = ss.str();
