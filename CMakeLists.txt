@@ -16,6 +16,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARDCONFIGURED_FILE_INCLUDE_DIR_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+set(WEB_SERVER_LIB web_server_lib)
+set(UTILS_LIB utils)
+
 add_subdirectory(Server)
 add_subdirectory(Client)
+add_subdirectory(WebServer)
+add_subdirectory(Utils)
 
